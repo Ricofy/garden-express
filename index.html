@@ -1,0 +1,483 @@
+?<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qzm4uzi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero-wrapper" id="heroWrapper">
+        <!-- Elementos do Custom Cursor -->
+        <div class="cursor-dot" id="cursorDot"></div>
+        <div class="cursor-outline" id="cursorOutline"></div>
+
+        <div class="video-placeholder">
+            <video autoplay muted loop playsinline id="bgVideo">
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+        <header class="main-header">
+            <div class="header-left">
+                <a href="#" class="logo"><img src="assets/logo.png" alt="Garden Premium Express" class="logo-image"></a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav class="center-nav">
+                <ul>
+                    <li><a href="#" data-i18n="nav-home">Início</a></li>
+                    <li><a href="#" data-i18n="nav-products">Produtos</a></li>
+                    <li><a href="#" data-i18n="nav-purpose">Propósito</a></li>
+                    <li><a href="#" data-i18n="nav-contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" data-i18n="search">Buscar</a>
+                <div class="lang-selector">
+                    <a href="#" class="lang-btn active" data-lang="pt">PT</a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="en">EN</a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="es">ES</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero-title">Bem-vindo à Inovação</h1>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">
+                    Fórmulas de alta performance, criadas com excelência para quem exige resultados extraordinários na
+                    rotina de cuidados.
+                </p>
+                <a href="#" class="cta-button" data-i18n="cta-btn">
+                    Explorar a Linha
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bottom-right-info">
+                <p data-i18n="exclusive">FÓRMULA EXCLUSIVA™</p>
+            </div>
+        </main>
+    </div> <!-- /hero-wrapper -->
+
+    <section class="products-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Soluções</h2>
+                <div class="carousel-nav">
+                    <button class="nav-btn prev-btn" aria-label="Anterior" id="prevBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="nav-btn next-btn" aria-label="Próximo" id="nextBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-track-container">
+                <div class="product-carousel" id="productCarousel">
+
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Tratamento Reconstrutor</div>
+                            <a href="produto.html?id=bomba-choque" style="display: contents" class="dyn-link"><img src="assets/capa_bomba_express.webp" alt="Bomba Choque" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Bomba Choque</h3>
+                            <p class="prod-desc">Reposição lipídica intensa e reconstrução em 10 min.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(312)</span>
+                                </div>
+                                <a href="produto.html?id=bomba-choque" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Controle do Frizz</div>
+                            <a href="produto.html?id=choque-disciplinador" style="display: contents" class="dyn-link"><img src="assets/capa_choque_express.webp" alt="Choque Disciplinador" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Choque Disciplinador</h3>
+                            <p class="prod-desc">Redução de volume rápida com ação térmica.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(189)</span>
+                                </div>
+                                <a href="produto.html?id=choque-disciplinador" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Colorimetria</div>
+                            <a href="produto.html?id=creme-oxidante" style="display: contents" class="dyn-link"><img src="assets/capa_oxidant_express.webp" alt="Creme Oxidante" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Creme Oxidante</h3>
+                            <p class="prod-desc">Ativação segura de coloração e descoloração.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(54)</span>
+                                </div>
+                                <a href="produto.html?id=creme-oxidante" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Colorimetria</div>
+                            <a href="produto.html?id=po-descolorante-express" style="display: contents" class="dyn-link"><img src="assets/capa_descolorante_express.webp" alt="Pó Descolorante Express" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Pó Descolorante Express</h3>
+                            <p class="prod-desc">Clareamento ultra-rápido de até 7 tons em 10 min.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(210)</span>
+                                </div>
+                                <a href="produto.html?id=po-descolorante-express" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Home Care</div>
+                            <a href="produto.html?id=shampoo-color-protection" style="display: contents" class="dyn-link"><img src="assets/capa_shampoo_express.webp" alt="Shampoo Color Protection" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Shampoo Color Protection</h3>
+                            <p class="prod-desc">Repositor de carbono e manutenção da cor.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(28)</span>
+                                </div>
+                                <a href="produto.html?id=shampoo-color-protection" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 6 -->
+                    <div class="product-card">
+                        <div class="card-image-box">
+                            <div class="product-tag"><span class="tag-dot"></span> Home Care</div>
+                            <a href="produto.html?id=mask-color-protection" style="display: contents" class="dyn-link"><img src="assets/capa_mask_express.webp" alt="Mask Color Protection" class="prod-img"></a>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="prod-title">Mask Color Protection</h3>
+                            <p class="prod-desc">Hidratação, proteção térmica e brilho intenso.</p>
+                            <div class="prod-footer">
+                                <div class="prod-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(45)</span>
+                                </div>
+                                <a href="produto.html?id=mask-color-protection" class="btn-saiba-mais" data-i18n="learn-more">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scroll-text-section">
+        <div class="scroll-container">
+            <div class="scroll-text-content">
+                <h2 class="scroll-text" id="scrollText">
+                <span class="scroll-highlight">
+                    <span class="word">Existimos </span><span class="word">para </span><span class="word">equilibrar
+                    </span><span class="word">um </span><span class="word">resultado </span><span
+                        class="word">impecável, </span><span class="word">sem </span><span class="word">sacrificar
+                    </span><span class="word">o </span><span class="word">que </span><span class="word">faz </span><span
+                        class="word">seu </span><span class="word">salão </span><span class="word">crescer. </span><span
+                        class="word">O </span><span class="word">tempo.</span>
+                </span>
+                <span class="scroll-intro">
+                    <span class="word">Seu </span><span class="word">trabalho </span><span class="word">sempre
+                    </span><span class="word">foi </span><span class="word">sobre </span><span class="word">transformar
+                    </span><span class="word">pessoas. </span>
+                    <span class="word">Mas, </span><span class="word">no </span><span class="word">seu </span><span
+                        class="word">dia </span><span class="word">a </span><span class="word">dia, </span><span
+                        class="word">tempo </span><span class="word">também </span><span class="word">é </span><span
+                        class="word">o </span><span class="word">que </span><span class="word">sustenta </span><span
+                        class="word">o </span><span class="word">seu </span><span class="word">salão. </span>
+                </span>
+            </h2>
+            <a href="proposito.html" class="simple-dark-btn" id="purposeBtn" data-i18n="purpose-btn">Nosso Propósito</a>
+            </div>
+        </div>
+        
+        <div class="scroll-image-col">
+            <img src="assets/modelo01.webp" alt="Modelo Garden Express">
+        </div>
+    </section>
+
+    <section class="drinkpouch-feature">
+        <div class="dp-content">
+            <div class="dp-text-col">
+                <span class="dp-label">05 / A CIÊNCIA</span>
+                <div class="dp-title-group">
+                    <span class="dp-marker">001</span>
+                    <h2 class="dp-title">Até 7 Tons<br>em 10 Minutos™</h2>
+                </div>
+                <div class="dp-title-group">
+                    <span class="dp-marker">002</span>
+                    <div class="dp-desc-wrapper">
+                        <h3 class="dp-subtitle">CLAREAMENTO RÁPIDO E SEGURO</h3>
+                        <p class="dp-p">Pó descolorante de alta performance desenvolvido para atuar com velocidade inigualável. Mantém a integridade e precisão dos fios na metade do tempo.</p>
+                        <a href="produto.html?id=po-descolorante-express" class="dp-btn" data-i18n="view-details">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dp-image-col">
+            <video muted playsinline preload="metadata" class="dp-product-media">
+                <source src="assets/Teste0001-0100.webm" type="video/webm">
+            </video>
+        </div>
+    </section>
+
+    <section class="community-section">
+        <div class="community-content">
+            <div class="community-text-col">
+                <span class="community-label">GARDEN + VOCÊ</span>
+                <h2 class="community-title">A Comunidade</h2>
+                <p class="community-desc">
+                    Potencializada pela ciência, feita para a vida real. Descubra como nossa comunidade de profissionais está incorporando Garden Express em suas rotinas diárias.
+                </p>
+                <div class="community-nav">
+                    <button class="nav-btn prev-btn" id="commPrevBtn" aria-label="Anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="nav-btn next-btn" id="commNextBtn" aria-label="Próximo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                    <button class="sound-toggle-btn" id="globalSoundToggle" aria-label="Ativar/Desativar Som">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="community-videos-col">
+                <div class="comm-carousel" id="commCarousel">
+                    
+                    <div class="comm-video-card">
+                        <div class="comm-video-wrapper">
+                            <video src="assets/SaveClip.App_AQMWlLXCU1VlJJMmgMHJf8fsOQ3wpMtUMFtmLf9wqtQK3CyHBl9si97fI1KlOPCTeIPWMBCnNw5-s7KYXsj6baEd.mp4" 
+                                   poster="assets/capa_bomba_express.webp" loop muted playsinline preload="auto" autoplay></video>
+                            <button class="video-play-pausepause" aria-label="Pause/Play">
+                                <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <div class="comm-video-overlay">
+                                <span class="user-handle">@gardenhairoficial</span>
+                                <div class="comm-product">
+                                    <a href="produto.html?id=bomba-choque" class="comm-product-link">
+                                        <img src="assets/capa_bomba_express.webp" alt="Bomba Choque" class="comm-product-thumb">
+                                    </a>
+                                    <span class="comm-product-tooltip">Bomba Choque</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comm-video-card">
+                        <div class="comm-video-wrapper">
+                            <video src="assets/SaveClip.App_AQMdBdS8ujPVbCacTfJ_BQZCAuV0z5Kzs8SYr7FPb7i_WjVh-hVhj7VeEtIr1RsyPg6brPUm2Wc3J2mnIscJ1k4GJ6Csz986v9ywB3w.mp4" 
+                                   poster="assets/capa_choque_express.webp" loop muted playsinline preload="none"></video>
+                            <button class="video-play-pausepause" aria-label="Pause/Play">
+                                <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <div class="comm-video-overlay">
+                                <span class="user-handle">@gardenhairoficial</span>
+                                <div class="comm-product">
+                                    <a href="produto.html?id=choque-disciplinador" class="comm-product-link">
+                                        <img src="assets/capa_choque_express.webp" alt="Choque Disciplinador" class="comm-product-thumb">
+                                    </a>
+                                    <span class="comm-product-tooltip">Choque Disciplinador</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comm-video-card">
+                        <div class="comm-video-wrapper">
+                            <video src="assets/SaveClip.App_AQN5rKVmRgNFV8PxfjQqTpEcQGWrbey_Nx9-i9xCcRVkdImdRk2qyiT82EhfQtkCFg1-ZV0dSZ-g4ZOSCJjvsReH.mp4" 
+                                   poster="assets/capa_descolorante_express.webp" loop muted playsinline preload="none"></video>
+                            <button class="video-play-pausepause" aria-label="Pause/Play">
+                                <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <div class="comm-video-overlay">
+                                <span class="user-handle">@gardenhairoficial</span>
+                                <div class="comm-product">
+                                    <a href="produto.html?id=po-descolorante-express" class="comm-product-link">
+                                        <img src="assets/capa_descolorante_express.webp" alt="Pó Descolorante" class="comm-product-thumb">
+                                    </a>
+                                    <span class="comm-product-tooltip">Pó Descolorante Express</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comm-video-card">
+                        <div class="comm-video-wrapper">
+                            <video src="assets/SaveClip.App_AQNXEDEO_sNRR7FDq6svobGK2GGnUx80yfT2hdQQEVcC_QhtM7VDB9JyZpLCAVJbfa5I8gJIu88qKkx7kEbsQz7AHzWuZHlO5CEGjL0.mp4" 
+                                   poster="assets/capa_oxidant_express.webp" loop muted playsinline preload="none"></video>
+                            <button class="video-play-pausepause" aria-label="Pause/Play">
+                                <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <div class="comm-video-overlay">
+                                <span class="user-handle">@gardenhairoficial</span>
+                                <div class="comm-product">
+                                    <a href="produto.html?id=creme-oxidante" class="comm-product-link">
+                                        <img src="assets/capa_oxidant_express.webp" alt="Creme Oxidante" class="comm-product-thumb">
+                                    </a>
+                                    <span class="comm-product-tooltip">Creme Oxidante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comm-video-card">
+                        <div class="comm-video-wrapper">
+                            <video src="assets/SaveClip.App_AQOHV5fAIbZLeCtWxSNBDGzXp3w8Pv37IjwxKyXB45zpgcBKVWh6468P8eqIOg_f_x5xgzGvW2LbCUSbq_MxIKQFMhM-SmZ9FiG2VMc.mp4" 
+                                   poster="assets/capa_shampoo_express.webp" loop muted playsinline preload="none"></video>
+                            <button class="video-play-pausepause" aria-label="Pause/Play">
+                                <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </button>
+                            <div class="comm-video-overlay">
+                                <span class="user-handle">@gardenhairoficial</span>
+                                <div class="comm-product">
+                                    <a href="produto.html?id=shampoo-color-protection" class="comm-product-link">
+                                        <img src="assets/capa_shampoo_express.webp" alt="Shampoo Color Protection" class="comm-product-thumb">
+                                    </a>
+                                    <span class="comm-product-tooltip">Shampoo Color Protection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-bg-image" style="background-image: url('assets/modelo01.webp');"></div>
+        <div class="footer-overlay"></div>
+        
+        <div class="footer-content-wrapper">
+            <!-- White card area -->
+            <div class="footer-card">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">GARDEN EXPRESS™</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">A Ciência</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-col-title">SUPORTE</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-col-title">INSCREVA-SE PARA NOVIDADES & HISTÓRIAS EXCLUSIVAS</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-submit">ENVIAR</button>
+                    </form>
+                    <p class="newsletter-disclaimer">Ao se inscrever, você concorda em receber e-mails de marketing da Garden Express de acordo com nossos Termos & Política de Privacidade.</p>
+                </div>
+            </div>
+            
+            <!-- Bottom brand area -->
+            <div class="footer-bottom">
+                <div class="footer-brand-title">
+                    <span class="fb-logo">GARDEN EXPRESS</span>
+                    <span class="fb-tagline">Desenvolvido por<br>Tecnologia Avançada</span>
+                </div>
+                
+                <div class="footer-meta">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                        <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg></a>
+                    </div>
+                    
+                    <ul class="footer-legal">
+                        <li>🌎 PT | EN <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></li>
+                        <li><a href="#">Termos & Condições</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Acessibilidade</a></li>
+                        <li>&copy; GARDEN EXPRESS™ 2026</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

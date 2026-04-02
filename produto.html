@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Premium Express</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-page.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qzm4uzi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="product-page">
+    <header class="main-header scrolled-light" style="background:#fff; border-bottom:1px solid #eaeaea; height: 80px; padding: 0 4rem;">
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Garden Premium Express" class="logo-image" style="filter: invert(1);"></a>
+        </div>
+        <nav class="center-nav" style="display:block; margin: 0 auto;">
+            <ul style="display:flex; gap:2rem; list-style:none;">
+                <li><a href="index.html" style="color:#000; text-decoration:none; font-size:0.85rem; font-weight:500; text-transform:uppercase;">Início</a></li>
+                <li><a href="index.html#produtos" style="color:#000; text-decoration:none; font-size:0.85rem; font-weight:500; text-transform:uppercase;">Produtos</a></li>
+                <li><a href="proposito.html" style="color:#000; text-decoration:none; font-size:0.85rem; font-weight:500; text-transform:uppercase;">Propósito</a></li>
+                <li><a href="contato.html" style="color:#000; text-decoration:none; font-size:0.85rem; font-weight:500; text-transform:uppercase;">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-grid">
+            <div class="product-media">
+                <div class="thumbnails">
+                    <button class="thumb-btn active"><img id="thumb-img" src="" alt=""></button>
+                </div>
+                <div class="main-image">
+                    <img id="main-img" src="" alt="">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-tag-header">
+                    <span class="category-tag"><span class="tag-square"></span> <span id="category-text"></span></span>
+                    <div class="prod-rating">
+                        <span class="stars" style="color:#f5b301; letter-spacing:2px; font-size:0.9rem;">★★★★★</span>
+                    </div>
+                </div>
+                
+                <h1 class="product-title" id="title-text"></h1>
+                <p class="product-description" id="desc-text"></p>
+                
+                <div class="product-highlights">
+                    <span class="highlight-item" id="h1-text"></span>
+                    <span class="highlight-separator">—</span>
+                    <span class="highlight-item" id="h2-text"></span>
+                </div>
+
+                <div class="product-meta">
+                    <span class="meta-label">Volume:</span>
+                    <span class="meta-value" id="vol-text"></span>
+                </div>
+
+                <a href="contato.html" class="btn-primary-full">Consultar Distribuidor</a>
+
+                <div class="accordion-group">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">INDICAÇÃO E BENEFÍCIOS <span class="icon">+</span></button>
+                        <div class="accordion-content">
+                            <p><strong>Indicação:</strong> <span id="ind-text"></span></p>
+                            <p><strong>Benefícios:</strong> <span id="ben-text"></span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">MODO DE USO <span class="icon">+</span></button>
+                        <div class="accordion-content">
+                            <p id="modo-text"></p>
+                            <p><strong>Tempo de ação:</strong> <span id="tempo-text"></span>.</p>
+                            <p><strong>Precauções:</strong> <span id="prec-text"></span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">INGREDIENTES ATIVOS <span class="icon">+</span></button>
+                        <div class="accordion-content">
+                            <p id="ativos-text"></p>
+                            <p><strong>pH:</strong> <span id="ph-text"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="routine-section">
+                    <h3>Complete a Rotina</h3>
+                    <a id="routine-link" href="#" style="text-decoration:none; color:inherit;">
+                        <div class="routine-card">
+                            <img id="routine-img" src="" alt="">
+                            <div class="routine-details">
+                                <h4 id="routine-title"></h4>
+                                <p id="routine-desc"></p>
+                                <span style="font-size:0.75rem; color:#cd0e61; font-weight:600; text-transform:uppercase;">Ver Produto</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const productsDB = {
+            "bomba-choque": {
+                title: "Bomba Choque", image: "capa_bomba_express.webp", category: "Tratamento Reconstrutor",
+                desc: "Foi desenvolvida para promover uma reposição lipídica intensa e uma reconstrução imediata da fibra capilar em até 10 minutos, restaurando a força, resistência e elasticidade dos fios danificados por processos químicos, mecânicos ou térmicos.",
+                h1: "REPOSIÇÃO LIPÍDICA", h2: "RECONSTRUÇÃO IMEDIATA", vol: "1kg",
+                ind: "Cabelos extremamente danificados e pós-química.",
+                ben: "Reposição de lipídios e proteínas, reconstrução da fibra, formação de filme protetor.",
+                modo: "Misturar 1:1 com Choque Disciplinador, aplicar nos fios limpos, pausar 10 min com calor e enxaguar.",
+                tempo: "10 minutos", prec: "Uso externo, evitar contato com olhos, suspender em caso de irritação.",
+                ativos: "Proteína hidrolisada de arroz, aminoácidos, óleo de girassol, silicones.", ph: "3.0 - 3.5",
+                routine: { link: "choque-disciplinador", title: "Choque Disciplinador", img: "capa_choque_express.webp", desc: "Controle de frizz e selagem" }
+            },
+            "choque-disciplinador": {
+                title: "Choque Disciplinador", image: "capa_choque_express.webp", category: "Controle do Frizz",
+                desc: "Rico em proteínas de ação resistente ao calor e umidade, protege a fibra reduzindo o volume de forma rápida, resistindo ao tempo úmido e reconstruindo a fibra de dentro para fora, fechando as escamas externas do fio com durabilidade.",
+                h1: "REDUÇÃO DE VOLUME", h2: "CONTROLE DE FRIZZ", vol: "1.150L",
+                ind: "Cabelos volumosos e com frizz.",
+                ben: "Redução de volume, controle de frizz, selagem e reconstrução.",
+                modo: "Aplicar no cabelo úmido, pausar 10 min, enxaguar, escovar e pranchar.",
+                tempo: "10 minutos", prec: "Uso externo, evitar contato com olhos.",
+                ativos: "Ácido hialurônico, aminoácidos, proteínas, óleos vegetais.", ph: "2.0 - 2.5",
+                routine: { link: "bomba-choque", title: "Bomba Choque", img: "capa_bomba_express.webp", desc: "Reposição lipídica intensa" }
+            },
+            "creme-oxidante": {
+                title: "Creme Oxidante", image: "capa_oxidant_express.webp", category: "Colorimetria",
+                desc: "Utilizado para colorir e descolorir os cabelos com alta precisão e segurança, garantindo o máximo de integridade dos fios durante todo o processo.",
+                h1: "ATIVAÇÃO SEGURA", h2: "COLORIMETRIA", vol: "10V, 20V, 30V e 35V",
+                ind: "Indicado para todos os tipos de cabelo sob processos de coloração e descoloração.",
+                ben: "Ativação uniforme da cor com preservação dos fios.",
+                modo: "Misturar conforme instrução da coloração ou do pó descolorante. Prova de toque obrigatória antes do uso.",
+                tempo: "Conforme indicação do produto principal", prec: "Pode causar irritação, usar luvas, não aplicar em cílios ou sobrancelhas.",
+                ativos: "Peróxido de hidrogênio, óleo de macadâmia, lanolina.", ph: "3.5 - 4.5",
+                routine: { link: "po-descolorante-express", title: "Pó Descolorante Express", img: "capa_descolorante_express.webp", desc: "Clareamento rápido e seguro" }
+            },
+            "po-descolorante-express": {
+                title: "Pó Descolorante Express", image: "capa_descolorante_express.webp", category: "Colorimetria",
+                desc: "Atua no fio para clareamento rápido e seguro, alcançando resultados incríveis em um curto espaço de tempo.",
+                h1: "CLAREAMENTO RÁPIDO", h2: "ATÉ 7 TONS", vol: "Pote Padrão",
+                ind: "Cabelos que passarão por processos de descoloração.",
+                ben: "Clareamento de até 6 a 7 tons em 10 minutos de forma segura.",
+                modo: "Misturar 1:2 com oxidante, aplicar e controlar o tempo. Teste de mecha e prova de toque obrigatórios.",
+                tempo: "Máximo 45 minutos", prec: "Contém amônia, pode causar irritação e danos se não respeitar o tempo.",
+                ativos: "Persulfatos, óleos hidratantes, silicones protetores.", ph: "Alcalino",
+                routine: { link: "creme-oxidante", title: "Creme Oxidante", img: "capa_oxidant_express.webp", desc: "Ativação para descoloração" }
+            },
+            "shampoo-color-protection": {
+                title: "Shampoo Color Protection", image: "capa_shampoo_express.webp", category: "Home Care",
+                desc: "Proporciona cabelos limpos, sedosos, protegidos e macios. Tendo como sua principal função a sinergia com o carbono capilar, potencializando ainda mais a durabilidade da cor e do tratamento pós-coloração.",
+                h1: "MANUTENÇÃO DA COR", h2: "PÓS-COLORAÇÃO", vol: "300ml",
+                ind: "Cabelos coloridos e quimicamente tratados.",
+                ben: "Reposição de carbono, maior durabilidade e manutenção da cor vibrante.",
+                modo: "Aplicar nos cabelos molhados, massagear suavemente o couro cabeludo e enxaguar. Repetir se necessário.",
+                tempo: "5 minutos", prec: "Uso externo. Manter fora do alcance de crianças.",
+                ativos: "Tecnologia Bio Restore e Complexo Deep Color.", ph: "5.0 - 6.0",
+                routine: { link: "mask-color-protection", title: "Mask Color Protection", img: "capa_mask_express.webp", desc: "Hidratação e selagem" }
+            },
+            "mask-color-protection": {
+                title: "Mask Color Protection", image: "capa_mask_express.webp", category: "Home Care",
+                desc: "Proporciona hidratação, proteção e maciez. Os agentes reconstrutores e os óleos essenciais agem na reparação profunda e resgatam a vitalidade, resistência e brilho intenso. Os polímeros deixam os fios selados e fáceis de desembaraçar.",
+                h1: "HIDRATAÇÃO INTENSA", h2: "PROTEÇÃO TÉRMICA", vol: "250g",
+                ind: "Cabelos coloridos, ressecados ou sem vitalidade.",
+                ben: "Desembaraço instantâneo, proteção térmica e brilho espelhado que reduz a escovação à metade do tempo.",
+                modo: "Após lavar com shampoo, aplicar a máscara do comprimento às pontas, enluvar bem, pausar e enxaguar.",
+                tempo: "10 minutos", prec: "Uso externo. Evitar aplicar na raiz.",
+                ativos: "Tecnologia Bio Restore, Deep Color e Óleos Essenciais.", ph: "3.0 - 3.5",
+                routine: { link: "shampoo-color-protection", title: "Shampoo Color Protection", img: "capa_shampoo_express.webp", desc: "Limpeza e proteção inicial" }
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let productId = urlParams.get('id');
+        
+        if (!productId || !productsDB[productId]) {
+            productId = 'bomba-choque';
+        }
+        
+        const data = productsDB[productId];
+
+        document.title = data.title + " - Garden Premium Express";
+        document.getElementById('title-text').textContent = data.title;
+        document.getElementById('desc-text').textContent = data.desc;
+        document.getElementById('category-text').textContent = data.category;
+        document.getElementById('h1-text').textContent = data.h1;
+        document.getElementById('h2-text').textContent = data.h2;
+        document.getElementById('vol-text').textContent = data.vol;
+        
+        document.getElementById('ind-text').textContent = data.ind;
+        document.getElementById('ben-text').textContent = data.ben;
+        document.getElementById('modo-text').textContent = data.modo;
+        document.getElementById('tempo-text').textContent = data.tempo;
+        document.getElementById('prec-text').textContent = data.prec;
+        document.getElementById('ativos-text').textContent = data.ativos;
+        document.getElementById('ph-text').textContent = data.ph;
+
+        document.getElementById('main-img').src = 'assets/' + data.image;
+        document.getElementById('main-img').alt = data.title;
+        document.getElementById('thumb-img').src = 'assets/' + data.image;
+
+        document.getElementById('routine-link').href = 'produto.html?id=' + data.routine.link;
+        document.getElementById('routine-img').src = 'assets/' + data.routine.img;
+        document.getElementById('routine-img').alt = data.routine.title;
+        document.getElementById('routine-title').textContent = data.routine.title;
+        document.getElementById('routine-desc').textContent = data.routine.desc;
+
+        document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.icon').textContent = '+';
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.querySelector('.icon').textContent = '-';
+                }
+            });
+        });
+
+        // Image Zoom Effect
+        const mainImageContainer = document.querySelector('.main-image');
+        const mainImgElem = document.getElementById('main-img');
+        
+        if (mainImageContainer && mainImgElem) {
+            mainImageContainer.addEventListener('mousemove', (e) => {
+                const rect = mainImageContainer.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                mainImgElem.style.transformOrigin = `${x}% ${y}%`;
+                mainImgElem.style.transform = 'scale(2)';
+            });
+            
+            mainImageContainer.addEventListener('mouseleave', () => {
+                mainImgElem.style.transformOrigin = 'center center';
+                mainImgElem.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>
